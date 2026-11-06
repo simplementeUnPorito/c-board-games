@@ -1,7 +1,6 @@
-<p align="center"><img src="alquerque/Images/tabla base alquerque.png" width="240" alt="Alquerque board grid asset"></p>
-<h1 align="center">Board Games in C: Connect Four and Alquerque</h1>
-<p align="center"><b>Two board-game engines in C: rule validation, win detection and a computer opponent, with a console and a GTK front end.</b><br>
-<img src="https://img.shields.io/badge/C-gcc-00599c"> <img src="https://img.shields.io/badge/GTK-3%20%2B%20Glade-4a86cf"> <img src="https://img.shields.io/badge/Console-Windows-555555"></p>
+<p align="center"><img src="docs/img/banner.svg" width="100%" alt="Board Games in C"></p>
+
+<p align="center"><img src="https://img.shields.io/badge/C-gcc-00599c"> <img src="https://img.shields.io/badge/GTK-3%20%2B%20Glade-4a86cf"> <img src="https://img.shields.io/badge/Console-Windows-555555"></p>
 <p align="center"><a href="#english">English</a> · <a href="#español">Español</a></p>
 
 ## English
