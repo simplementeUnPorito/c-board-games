@@ -47,14 +47,28 @@ Este repositorio contiene dos juegos de tablero escritos en C. Cada uno implemen
 ### Proyectos
 | Proyecto | Qué hace | Interfaz | Compilación |
 |---|---|---|---|
-| [`connect-four/`](connect-four) | Cuatro en Raya 6x7 persona vs computadora. Primer jugador aleatorio, límite de turnos opcional (1-21 por jugador), rendición, desempate por puntaje de adyacencia | Consola (Windows) | `gcc CuatroEnRayaFinal.c -o connect4` |
-| [`alquerque/`](alquerque) | Alquerque 5x5 con 12 fichas por bando: jugadas y capturas validadas (con saltos encadenados), un jugador vs computadora, computadora vs computadora o dos jugadores | Ventana GTK 3 (`play.glade`) | `gcc src/alquerque.c -o alquerque $(pkg-config --cflags --libs gtk+-3.0)`, ejecutar desde `alquerque/` |
+| [`connect-four/`](connect-four) | Cuatro en Raya 6x7, persona contra computadora. Primer jugador aleatorio, límite de turnos opcional (1-21 turnos para cada uno), rendición, desempate por puntaje de fichas adyacentes, mensajes en arte ASCII | Consola (usa `windows.h` y `system("cls")`) | `gcc CuatroEnRayaFinal.c -o connect4` (Windows) |
+| [`alquerque/`](alquerque) | Alquerque 5x5 con 12 fichas por bando: movimientos y capturas validados (incluidos saltos encadenados), una persona contra la computadora, computadora contra computadora o dos personas, nombres de jugadores opcionales | Ventana GTK 3 definida en `play.glade` | `gcc src/alquerque.c -o alquerque $(pkg-config --cflags --libs gtk+-3.0)`, ejecutar desde la carpeta `alquerque/` |
+
+### Aspectos destacados
+- Reglas implementadas sin bibliotecas de juegos: seguimiento del llenado de columnas y comprobación de victoria en cuatro direcciones para Cuatro en Raya; validación diagonal, ortogonal y de capturas por salto con reglas de encadenamiento para Alquerque.
+- Manejo de entradas: análisis de enteros con filtrado de rango (Cuatro en Raya); comprobaciones sintácticas y semánticas de cadenas de movimiento `xy:xy` (Alquerque).
+- Alquerque separa la lógica del juego de los callbacks de eventos GTK; la lógica de consola se reutilizó detrás de la GUI.
+- Se incluyen notas de diseño y diagramas de flujo para Alquerque; Cuatro en Raya incluye un informe escrito sobre estructuras de datos y algoritmos.
+
+### Estructura del repositorio
+```
+connect-four/   src/ (juego y biblioteca de mensajes)
+alquerque/      src/alquerque.c, play.glade, Images/, docs/ (diagrama de flujo, esquema de GUI, reglas de movimiento)
+```
 
 ### Limitaciones conocidas
-Los oponentes son aleatorios. No se incluyen capturas de pantalla de los programas en ejecución.
+- Los oponentes controlados por la computadora son aleatorios, no estratégicos.
+- Las notas de diseño de Alquerque registran un cierre inesperado al generar el movimiento de la computadora en una versión temprana de la GUI; el estado final de ese problema no se volvió a verificar aquí.
+- No se incluyen capturas de pantalla de los programas en ejecución.
 
 ### Equipo y créditos
-Desarrollado por Elías David Álvarez Martínez y José Pássera en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2022.
+Desarrollado por Elías David Álvarez Martínez y José Pássera en la Universidad Católica "Nuestra Señora de la Asunción" (Paraguay), 2022. El informe de Cuatro en Raya se comparte como referencia.
 
 ### Licencia
 MIT.
