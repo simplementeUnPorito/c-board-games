@@ -6,7 +6,7 @@
 ## English
 
 ### Overview
-Two complete board games written in plain C. Each one implements the game rules from scratch (move validation, capture or four-in-a-row detection, end-of-game conditions) and a computer opponent. Connect Four runs in the console on Windows; Alquerque has a GTK 3 interface built with Glade. The computer opponent in both games chooses randomly among moves that pass the same validation used for human players; there is no search or heuristic play.
+This repository contains two board games written in plain C. Each implements its rules from scratch (move validation, capture or four-in-a-row detection, end-of-game conditions) and includes a computer opponent. Connect Four runs in the Windows console; Alquerque has a GTK 3 interface built with Glade. In both games, the computer chooses randomly among moves that pass the same validation used for human players; there is no search or heuristic play.
 
 ### Projects
 | Project | What it does | Interface | Build |
@@ -42,7 +42,7 @@ MIT.
 ## Español
 
 ### Descripción general
-Dos juegos de tablero completos escritos en C. Cada uno implementa desde cero las reglas (validación de jugadas, capturas o detección de cuatro en línea, condiciones de fin) y un oponente controlado por la computadora. Cuatro en Raya corre en consola en Windows; Alquerque tiene una interfaz GTK 3 creada con Glade. En ambos juegos el oponente elige al azar entre jugadas que pasan la misma validación que las de una persona; no hay búsqueda ni heurística.
+Este repositorio contiene dos juegos de tablero escritos en C. Cada uno implementa desde cero sus reglas (validación de jugadas, capturas o detección de cuatro en línea, condiciones de fin) e incluye un oponente controlado por la computadora. Cuatro en Raya corre en la consola de Windows; Alquerque tiene una interfaz GTK 3 creada con Glade. En ambos juegos, la computadora elige al azar entre jugadas que pasan la misma validación que las de una persona; no hay búsqueda ni heurística.
 
 ### Proyectos
 | Proyecto | Qué hace | Interfaz | Compilación |
