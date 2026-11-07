@@ -1,6 +1,6 @@
 <p align="center"><img src="docs/img/banner.svg" width="100%" alt="Board Games in C"></p>
 
-<p align="center"><img src="https://img.shields.io/badge/C-gcc-00599c"> <img src="https://img.shields.io/badge/GTK-3%20%2B%20Glade-4a86cf"> <img src="https://img.shields.io/badge/Console-Windows-555555"></p>
+<p align="center"><img src="https://img.shields.io/badge/Year-2022-555"> <img src="https://img.shields.io/badge/C-gcc-00599c"> <img src="https://img.shields.io/badge/GTK-3%20%2B%20Glade-4a86cf"> <img src="https://img.shields.io/badge/Console-Windows-555555"></p>
 <p align="center"><a href="#english">English</a> · <a href="#español">Español</a></p>
 
 ## English
